@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<style>
+
+    .horizontal{height: 120px;}
+    .active{float: left;margin: 10px;list-style: none;}
+    .details{width: 100px;height: 100px;background: green;color: #fff;}
+</style>
+<body>
+<ul class="horizontal">
+    <li>1111<a href="http://www.baidu.com">nihao</a>
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </li>
+    <li>2222
+        <ul>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+        </ul>
+    </li>
+</ul>
+<div id="container">111</div>
+
+<button class="show-details">click</button>
+<div class="details">123</div>
+<script>
+    $(function(){
+        $('ul.horizontal>li').addClass('active');
+        $('ul.horizontal li:not(.active)').css('background','red');
+        $('#container').append('<a href="more.html">more</a>')
+        $('button.show-details').click(function(){
+            $('.details').slideUp();
+        });
+        $('a[href^="http"][href*="com"]')
+
+    });
+</script>
+</body>
+</html>
